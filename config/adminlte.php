@@ -232,6 +232,10 @@ return [
 
     'menu' => [
         [
+            'text' => 'Planos',
+            'url'  => 'admin/plans',
+        ],
+        /*[
             'text' => 'search',
             'search' => true,
             'topnav' => true,
@@ -312,7 +316,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*
