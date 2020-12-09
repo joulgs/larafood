@@ -7,16 +7,15 @@
 @stop
 
 @section('content')
-    <p>Planos disponiveis</p>
+    <h1>Planos Disponiveis <a href="{{ route('plans.create') }}" class="btn btn-dark">Novo Plano</a></h1>
 
     <div class="card">
         <div class="card-header">
-            Header
+            #filtros
         </div>
         <div class="card-body">
             
             <table class="table table-condensed">
-
                 <thead>
                     <th>Nome</th>
                     <th>Preço</th>
@@ -39,12 +38,13 @@
 
                     @endforeach
                 </tbody>
-
             </table>
 
         </div>
+        <div class="card-footer">
+            {!! $plans->links('pagination::bootstrap-4') !!}    
+        </div>
     </div>
-
 @stop
 
 
