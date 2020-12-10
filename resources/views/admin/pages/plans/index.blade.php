@@ -3,12 +3,10 @@
 @section('title', 'Planos')
 
 @section('content_header')
-    <h1>Planos</h1>
+    <h1>Planos <a href="{{ route('plans.create') }}" class="btn btn-dark float-right"> <i class="fa fa-plus"></i> Novo Plano</a></h1>
 @stop
 
 @section('content')
-    <h1>Planos Disponiveis <a href="{{ route('plans.create') }}" class="btn btn-dark">Novo Plano</a></h1>
-
     <div class="card">
         <div class="card-header">
             #filtros
@@ -19,7 +17,7 @@
                 <thead>
                     <th>Nome</th>
                     <th>Preço</th>
-                    <th width="50px" >Ações</th>
+                    <th width="100px" >Ações</th>
                 </thead>
                 <tbody>
                     @foreach ($plans as $plan)
@@ -31,8 +29,8 @@
                             <td>
                                 {{ $plan->price }}
                             </td>
-                            <td style="width: 10px">
-                                <a href="" class="btn btn-warning">VER</a>
+                            <td>
+                                <a href="" class="btn btn-warning"><i class="fa fa-eye"></i> VER</a>
                             </td>
                         </tr>
 
