@@ -14,20 +14,20 @@
         </div>
         <div class="card-body">
 
-            <form action="">
+            <form action=" {{ route('plans.store') }} " class="form" method="POST">
                 @csrf
 
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" name="name" id="" placeholder="Nome do Plano">    
+                    <input type="text" name="name" class="form-control" placeholder="Nome do Plano">    
                 </div>
                 <div class="form-group">
                     <label>Descrição:</label>
-                    <input type="text" name="description" id="" placeholder="Descrição">    
+                    <input type="text" name="description" class="form-control" placeholder="Descrição">    
                 </div>
                 <div class="form-group">
                     <label>Preço:</label>
-                    <input type="text" name="price" id="" placeholder="Preço">    
+                    <input type="text" name="price" class="form-control" placeholder="Preço">    
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Salvar</button>
