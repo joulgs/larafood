@@ -12,7 +12,7 @@
             #filtros
         </div>
         <div class="card-body">
-            
+
             <table class="table table-condensed">
                 <thead>
                     <th>Nome</th>
@@ -21,16 +21,16 @@
                 </thead>
                 <tbody>
                     @foreach ($plans as $plan)
-                
+
                         <tr>
                             <td>
                                 {{ $plan->name }}
                             </td>
                             <td>
-                                {{ $plan->price }}
+                                R$ {{ number_format($plan->price, 2, ',','.') }}
                             </td>
                             <td>
-                                <a href="" class="btn btn-warning"><i class="fa fa-eye"></i> VER</a>
+                                <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning"><i class="fa fa-eye"></i> VER</a>
                             </td>
                         </tr>
 
@@ -40,7 +40,7 @@
 
         </div>
         <div class="card-footer">
-            {!! $plans->links('pagination::bootstrap-4') !!}    
+            {!! $plans->links('pagination::bootstrap-4') !!}
         </div>
     </div>
 @stop
